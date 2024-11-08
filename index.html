@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <link  href="./styles.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>SpiderBuds</title>
+    
+    
+</head>
+<body>
+    <model-viewer
+     src="../model/SpiderBuds.gltf"
+      ar
+       ar-modes="webxr scene-viewer quick-look" 
+       camera-controls 
+       tone-mapping="neutral"
+        poster="../images/poster.webp" 
+        shadow-intensity="1.73"
+         shadow-softness="0.62">
+
+
+
+
+         <!--Hotspot-->
+
+          <!--FingerTouch-->
+        <button 
+        class="Hotspot" 
+        slot="hotspot-1" 
+        data-position="-0.36165229436472424m 0.37167672387460166m 0.4236029955164972m"
+         data-normal="0m 0m 1m" 
+         data-visibility-attribute="visible">
+
+            <div class="HotspotAnnotation"></div>
+              </button>
+
+
+         <!--volume-->
+        <button 
+        class="Hotspot" 
+        slot="hotspot-2" 
+        data-position="-0.5779381094612434m 0.34908931059727233m 0.13708514104062536m" 
+        data-normal="-0.9999999999999996m 3.332000986233652e-8m 0m"
+         data-visibility-attribute="visible">
+
+            <div class="HotspotAnnotation"></div>
+        </button>
+
+
+        <!--wireless-->
+        <button class="Hotspot" 
+        slot="hotspot-3"
+         data-position="-0.15684051417979383m 0.3299952927006819m 0.17924002789391996m"
+          data-normal="0.9674204062784091m -0.25246522321807013m -0.01894910503342979m" 
+          data-visibility-attribute="visible">
+            <div class="HotspotAnnotation"></div>
+        </button>
+        
+        <!--noise cancelqtion-->
+        <button class="Hotspot"
+         slot="hotspot-4" 
+         data-position="-0.33614034661758824m 0.3671759688661759m -0.4471540022238331m"
+          data-normal="0.1194335144384005m 0.003200620553490713m -0.9928370418437082m" 
+          data-visibility-attribute="visible">
+            <div class="HotspotAnnotation"></div>
+        </button>
+
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="../images/ar_hand_prompt.png">
+        </div>
+      </model-viewer>  
+
+      <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+      <script src="/js/main.js"></script>
+</body>
+</html>
